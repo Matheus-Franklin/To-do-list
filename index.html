@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <header> <h1>To-Do List</h1> </header>
+  
+    <main>
+        <section class="todo-app">
+            <input type="text" id="new-task" placeholder="Add a new task">
+            <button id="add-task">Add</button>
+            <ul id="task-list"></ul>
+        </section>
+    </main>
+
+    
+    <svg id="complete-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+        <path d="M9 19c-.2 0-.5-.1-.7-.3l-4-4c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l3.3 3.3L18.3 7.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-10 10c-.2.2-.5.3-.7.3z"/>
+    </svg>
+
+    <svg id="delete-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+        <path d="M3 6l3 18h12l3-18H3zm5.5 2h1v12h-1V8zm4 0h1v12h-1V8zm4 0h1v12h-1V8zM7 4h10l-1-2H8L7 4z"/>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>

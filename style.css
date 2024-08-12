@@ -1,0 +1,128 @@
+:root {
+  --font-size-base: 16px;
+  --spacing-base: 1rem;
+  --border-radius: 0.25rem;
+  --button-padding: 0.625rem; /* 10px */
+  --input-padding: 0.625rem; /* 10px */
+  --box-padding: 1.25rem 1.875rem; /* 20px 30px */
+  --header-margin-bottom: 1.25rem; /* 20px */
+  --task-item-padding: 0.625rem; /* 10px */
+  --button-font-size: 1.5rem; /* 24px */
+  --icon-size: 1.5rem; /* 24px */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+  font-size: var(--font-size-base);
+}
+
+header {
+  text-align: center;
+  margin-bottom: var(--header-margin-bottom);
+  padding: var(--box-padding);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-app {
+  background: #fff;
+  padding: var(--box-padding);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 25rem; /* 400px */
+}
+
+#new-task {
+  width: calc(100% - 2 * var(--spacing-base));
+  padding: var(--input-padding);
+  margin-bottom: 0.9375rem; /* 15px */
+  border: 0.125rem solid #ccc; /* 2px */
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+#add-task {
+  padding: var(--button-padding);
+  width: 100%;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-task:hover {
+  background: #218838;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--task-item-padding);
+  border-bottom: 0.0625rem solid #ccc; /* 1px */
+  transition: background-color 0.3s ease;
+}
+
+.task-item:hover {
+  background: #f9f9f9;
+}
+
+.task-item.complete {
+  text-decoration: line-through;
+  color: #0e0404;
+}
+
+.task-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--button-font-size);
+  padding: 0.3125rem; /* 5px */
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.task-item button svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  fill: currentColor;
+}
+
+.task-item button.complete-task {
+  color: #28a745;
+}
+
+.task-item button.complete-task:hover {
+  color: #218838;
+  transform: scale(1.1);
+}
+
+.task-item button.delete-task {
+  color: #dc3545;
+}
+
+.task-item button.delete-task:hover {
+  color: #c82333;
+  transform: scale(1.1);
+}
